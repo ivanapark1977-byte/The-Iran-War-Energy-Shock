@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Iran War Energy Shock: LNG Markets, Price Forecasts & Project Viability to 2050 — The Anglophone Blind Spot</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  /* ── COLOR & FONT SYSTEM ── */
+  :root {
+    /* Primary palette */
+    --red: #A32D2D;
+    --red-light: #f9e8e8;
+    --amber: #854F0B;
+    --amber-light: #fdf3e3;
+    --green: #2D6A1F;
+    --green-light: #eaf3e6;
+    
+    /* Neutrals */
+    --ink: #1a1a18;
+    --ink-mid: #3d3d38;
+    --ink-light: #6b6b62;
+    --ink-faint: #a8a89e;
+    --rule: #d4d0c4;
+    --bg: #fafaf7;
+    --bg-warm: #f4f2ec;
+    --bg-card: #ffffff;
+    
+    /* Typography */
+    --serif: 'Source Serif 4', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+    --mono: 'JetBrains Mono', monospace;
+    
+    /* Layout */
+    --measure: 68ch;
+    --wide: 88ch;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 18px; scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .masthead {
+    border-bottom: 1px solid var(--rule);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 1rem;
+  }
+  .masthead-brand {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .masthead-brand span { color: var(--red); }
+  .masthead-nav { display: flex; gap: 1.5rem; align-items: center; }
+  .masthead-nav a {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .masthead-nav a:hover { color: var(--red); }
+  .masthead-nav .sub-link {
+    background: var(--red);
+    color: #fff !important;
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+  }
+  .masthead-nav .sub-link:hover { background: #7a1f1f; }
+
+  /* ── COVER ── */
+  .cover {
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    border-bottom: 3px solid var(--ink);
+  }
+  .cover-kicker {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .cover-kicker::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2px;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+  .cover-title {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+  }
+  .cover-sub {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink-mid);
+    line-height: 1.5;
+    max-width: 56ch;
+    margin-bottom: 2.5rem;
+  }
+  .cover-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+  }
+  .cover-meta span strong { color: var(--ink-light); }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .body-text {
+    max-width: var(--measure);
+  }
+
+  /* ── EXECUTIVE SUMMARY BOX ── */
+  .exec-summary {
+    background: var(--ink);
+    color: #fff;
+    padding: 3rem;
+    margin: 3rem 0;
+    border-radius: 3px;
+  }
+  .exec-summary h2 {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red-light);
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+  }
+  .exec-summary .finding {
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .exec-summary .finding-num {
+    font-family: var(--display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--red-light);
+  }
+  .exec-summary .finding-text { font-size: 0.95rem; line-height: 1.65; }
+  .exec-summary .finding-text strong { font-weight: 600; color: #fff; }
+  .exec-summary a { color: var(--red-light); }
+
+  /* ── STAT CARDS ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    padding: 1.75rem 1.5rem;
+    border-radius: 3px;
+  }
+  .stat-value {
+    font-family: var(--display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stat-value.red { color: var(--red); }
+  .stat-value.green { color: var(--green); }
+  .stat-value.amber { color: var(--amber); }
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--ink-mid);
+    line-height: 1.4;
+    margin-bottom: 0.35rem;
+  }
+  .stat-sub {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ── CALLOUTS ── */
+  .callout {
+    border-left: 3px solid var(--ink);
+    background: var(--bg-warm);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: var(--ink-mid);
+  }
+  .callout.amber { border-left-color: var(--amber); background: var(--amber-light); }
+  .callout.green { border-left-color: var(--green); background: var(--green-light); }
+  .callout-source {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--ink-light);
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .section {
+    margin: 4rem 0;
+  }
+  .section-number {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    color: var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .subsection {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+  }
+  .subsubsection {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--ink-mid);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  a {
+    color: var(--red);
+    text-decoration: underline;
+    text-decoration-color: var(--red-light);
+    transition: text-decoration-color 0.2s;
+  }
+  a:hover { text-decoration-color: var(--red); }
+
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  li { margin-bottom: 0.5rem; }
+
+  .rule-heavy {
+    border: none;
+    border-top: 3px solid var(--ink);
+    margin: 5rem 0;
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    margin: 2.5rem 0;
+    overflow-x: auto;
+  }
+  .table-caption {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 1rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    background: var(--bg-card);
+  }
+  thead {
+    border-bottom: 2px solid var(--ink);
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    color: var(--ink-mid);
+  }
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  tbody tr:hover {
+    background: var(--bg-warm);
+  }
+  .highlight-red { background: var(--red-light); color: var(--red); font-weight: 600; }
+  .highlight-green { background: var(--green-light); color: var(--green); font-weight: 600; }
+  .highlight-amber { background: var(--amber-light); color: var(--amber); font-weight: 600; }
+
+  /* ── TABLE OF CONTENTS ── */
+  .toc {
+    background: var(--bg-warm);
+    border: 1px solid var(--rule);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 3px;
+  }
+  .toc-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: var(--ink);
+  }
+  .toc ol {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: toc-counter;
+  }
+  .toc li {
+    counter-increment: toc-counter;
+    margin-bottom: 0.75rem;
+  }
+  .toc li::before {
+    content: counter(toc-counter, decimal-leading-zero) " ";
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--red);
+    margin-right: 0.75rem;
+  }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .toc a:hover {
+    color: var(--red);
+  }
+
+  /* ── GLOSSARY ── */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2rem;
+    margin-top: 2rem;
+  }
+  .gloss-term {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .gloss-def {
+    font-size: 0.9rem;
+    color: var(--ink-mid);
+    line-height: 1.6;
+  }
+
+  /* ── REFERENCES ── */
+  .references {
+    background: var(--bg-warm);
+    border-top: 1px solid var(--rule);
+    padding: 3rem 0;
+    margin-top: 5rem;
+  }
+  .ref-list {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-left: 0;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+  }
+  .ref-list li {
+    margin-bottom: 1rem;
+    color: var(--ink-mid);
+  }
+  .ref-list a {
+    color: var(--red);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--red-light);
+  }
+  .ref-list a:hover {
+    border-bottom-color: var(--red);
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.6);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  .footer-brand {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .site-footer a {
+    color: var(--red-light);
+    text-decoration: underline;
+  }
+  .site-footer a:hover {
+    color: #fff;
+  }
+
+  /* ── RATIO BARS ── */
+  .ratio-section {
+    margin: 2rem 0;
+  }
+  .ratio-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .ratio-label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+  }
+  .ratio-track {
+    background: var(--bg-warm);
+    border-radius: 2px;
+    height: 2rem;
+    position: relative;
+  }
+  .ratio-fill {
+    height: 100%;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    html { font-size: 16px; }
+    .masthead { flex-direction: column; align-items: flex-start; }
+    .masthead-nav { flex-wrap: wrap; }
+    .cover { padding: 3rem 1.5rem 2rem; }
+    .container { padding: 0 1.5rem; }
+    .exec-summary { padding: 2rem 1.5rem; }
+    .stat-grid { grid-template-columns: 1fr; }
+    .ratio-row { grid-template-columns: 1fr; }
+    .glossary-grid { grid-template-columns: 1fr; gap: 0.5rem 0; }
+    .gloss-term { margin-top: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MASTHEAD
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="masthead">
+  <a href="#" class="masthead-brand">The Anglophone <span>Blind Spot</span></a>
+  <nav class="masthead-nav">
+    <a href="#findings">Findings</a>
+    <a href="#references">References</a>
+    <a href="https://ivanapark1.substack.com" class="sub-link">Subscribe</a>
+  </nav>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     COVER
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-kicker">Investigative Report — Energy Markets & Geopolitics</div>
+  <h1 class="cover-title">The Iran War Energy Shock</h1>
+  <p class="cover-sub">LNG Markets, Price Forecasts, and Project Viability to 2050</p>
+  <div class="cover-meta">
+    <span><strong>Published by</strong> Ivana Park</span>
+    <span><strong>Date</strong> April 2026</span>
+    <span><strong>Region</strong> Global / Middle East / Asia</span>
+    <span><strong>Subject</strong> LNG Markets • Energy Security • Strait of Hormuz</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MAIN CONTENT
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="container">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc" style="margin-top: 3rem;">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#findings">Executive Summary</a></li>
+      <li><a href="#section-01">War Impact on Energy Markets</a></li>
+      <li><a href="#section-02">Long-Term Demand Destruction</a></li>
+      <li><a href="#section-03">Global LNG Capacity Build-Out</a></li>
+      <li><a href="#section-04">LNG Price Forecast 2025–2050</a></li>
+      <li><a href="#section-05">Project Viability Analysis</a></li>
+      <li><a href="#section-06">Strategic Implications</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </div>
+
+  <!-- AT A GLANCE STATS -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-value red">$25.40</div>
+      <div class="stat-label">JKM peak (April 2026)</div>
+      <div class="stat-sub">3× pre-war level</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">666 mtpa</div>
+      <div class="stat-label">2028 global capacity</div>
+      <div class="stat-sub">Largest wave in LNG history</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value amber">~255 mtpa</div>
+      <div class="stat-label">Peak capacity surplus</div>
+      <div class="stat-sub">vs Scenario A demand, 2029</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value green">9 of 24</div>
+      <div class="stat-label">Projects unviable at trough</div>
+      <div class="stat-sub">JKM $7.54 floor in 2031</div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="exec-summary" id="findings">
+    <h2>Key Findings</h2>
+    
+    <div class="finding">
+      <span class="finding-num">1</span>
+      <p class="finding-text"><strong>The 2026 US-Israeli war on Iran has triggered the largest supply disruption in the history of the global oil market.</strong> The Strait of Hormuz closure and Iranian missile strikes on Ras Laffan Industrial City have simultaneously caused a historic price spike and structurally reshaped the long-term LNG supply-demand balance — paradoxically accelerating the conditions for a prolonged oversupply glut that will penalise most projects sanctioned between 2023 and 2026.</p>
+    </div>
+    
+    <div class="finding">
+      <span class="finding-num">2</span>
+      <p class="finding-text"><strong>The war simultaneously pushed LNG prices to crisis highs and destroyed the demand base that the incoming capacity wave was built to serve.</strong> Price-sensitive South and Southeast Asian markets are now accelerating coal switching and renewable leapfrogging, creating permanent demand destruction.</p>
+    </div>
+    
+    <div class="finding">
+      <span class="finding-num">3</span>
+      <p class="finding-text"><strong>The 666 mtpa of nameplate capacity expected online by 2028 will create the most severe structural LNG surplus in history.</strong> Implied utilisation rates will fall to 62% at peak, with the JKM trough reaching $7.54/MMBtu in 2031 — below the all-in breakeven of at least nine of the 24 major projects reviewed.</p>
+    </div>
+    
+    <div class="finding">
+      <span class="finding-num">4</span>
+      <p class="finding-text"><strong>Qatar's competitive position is paradoxically preserved in the long run.</strong> Its $3.80–3.90/MMBtu breakeven ensures viability at any price point — but North Field East and West delays caused by the war mean Qatari market share is permanently ceded to US Gulf Coast producers who face no Hormuz risk.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 01: WAR IMPACT -->
+  <div class="section" id="section-01">
+    <span class="section-number">Section 01</span>
+    <h1 class="section-title">War Impact on Energy Markets</h1>
+
+    <div class="body-text">
+      <p>The conflict generated an immediate supply shock of historic magnitude. The IEA characterised the disruption as the "greatest global energy security challenge in history." The Strait of Hormuz closure removed 20 million barrels per day of crude oil flows and approximately 20% of global LNG trade from the market in a matter of days.</p>
+    </div>
+
+    <h2 class="subsection">Oil Market</h2>
+    <p>Brent crude surged from a pre-war level of approximately $65/bbl to over $120/bbl following the Strait closure, with physical Dubai prices rising 76% — more than double the paper-market Brent move. By early April, analysts were modelling a potential $200/bbl scenario if the Strait remained closed through summer and strategic reserves were exhausted.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-value">~$65/bbl</div>
+        <div class="stat-label">Pre-war Brent</div>
+        <div class="stat-sub">Late February 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value red">$120/bbl</div>
+        <div class="stat-label">Brent at Strait closure</div>
+        <div class="stat-sub">March 4, 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value red">10 mb/d</div>
+        <div class="stat-label">Gulf production lost</div>
+        <div class="stat-sub">Kuwait, Iraq, Saudi, UAE</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value amber">$4.00/gal</div>
+        <div class="stat-label">US gas price (retail)</div>
+        <div class="stat-sub">March 31, 2026</div>
+      </div>
+    </div>
+
+    <h2 class="subsection">LNG Market</h2>
+    <p>The LNG market absorbed a structurally more damaging shock than oil due to the physical concentration of export capacity at a single facility. Unlike oil, where alternative producers could theoretically increase output, there is no spare LNG liquefaction capacity available at short notice to replace Qatari volumes.</p>
+
+    <div class="table-wrap">
+      <div class="table-caption">Table 1 — LNG spot price timeline: war onset through crisis peak</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>JKM ($/MMBtu)</th>
+            <th>TTF ($/MMBtu)</th>
+            <th>Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pre-war baseline</td>
+            <td>Feb 26, 2026</td>
+            <td>$10.00</td>
+            <td>$9.20</td>
+            <td>Forward curve projecting steady decline</td>
+          </tr>
+          <tr>
+            <td>Iran drone strikes / Force majeure</td>
+            <td>Mar 2, 2026</td>
+            <td class="highlight-amber">$15.07</td>
+            <td>$13.50</td>
+            <td>JKM +39% intraday; TTF +50%</td>
+          </tr>
+          <tr>
+            <td>Strait of Hormuz closure</td>
+            <td>Mar 4, 2026</td>
+            <td class="highlight-red">$18.50</td>
+            <td>$15.00</td>
+            <td>20% of global LNG offline</td>
+          </tr>
+          <tr>
+            <td>Second strike on Ras Laffan (17%)</td>
+            <td>Mar 18, 2026</td>
+            <td class="highlight-red">$22.35</td>
+            <td>$20.72</td>
+            <td>12.8 mt permanent damage confirmed</td>
+          </tr>
+          <tr>
+            <td>JKM peak crisis level</td>
+            <td>Mar–Apr 2026</td>
+            <td class="highlight-red">$25.40</td>
+            <td>$22.00</td>
+            <td>3× pre-war; demand destruction begins</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">Sources: Kpler, Poten & Partners, Platts, Al Jazeera.</p>
+
+    <div class="callout amber">
+      <p>The March 18 strike was particularly consequential. Damage to Ras Laffan is estimated to have permanently removed approximately 12.8 million tonnes per annum of LNG export capacity — a volume equivalent to the entire LNG output of Algeria.</p>
+    </div>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- SECTION 02: DEMAND DESTRUCTION -->
+  <div class="section" id="section-02">
+    <span class="section-number">Section 02</span>
+    <h1 class="section-title">Long-Term Demand Destruction (2025–2050)</h1>
+
+    <div class="body-text">
+      <p>The war's demand-side effects extend far beyond the immediate crisis period. Three structural mechanisms are reshaping long-run energy demand in ways that will outlast the conflict by decades.</p>
+    </div>
+
+    <h2 class="subsection">Southeast Asia LNG "Skip" Effect</h2>
+    <p>The most consequential long-term demand consequence is the acceleration of what analysts had already flagged as a risk: price-sensitive markets in South and Southeast Asia choosing to bypass LNG as a transition fuel entirely. Bangladesh, Pakistan, Thailand, and the Philippines — all priced out of the spot market at $21–25/MMBtu — are accelerating renewable deployment and coal switching, with governments explicitly revising national energy plans away from LNG dependency.</p>
+
+    <h2 class="subsection">Three Scenario Demand Framework</h2>
+    
+    <div class="table-wrap">
+      <div class="table-caption">Table 2 — Long-term demand scenario framework</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Description</th>
+            <th>Oil 2030 (mb/d)</th>
+            <th>LNG 2030 (bcm)</th>
+            <th>vs Pre-War</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A — Swift resolution</strong></td>
+            <td>Ceasefire mid-2026; Hormuz reopens Q3; Ras Laffan repair by 2030</td>
+            <td>101</td>
+            <td class="highlight-amber">529</td>
+            <td class="highlight-red">−231 bcm</td>
+          </tr>
+          <tr>
+            <td><strong>B — Prolonged conflict</strong></td>
+            <td>War extends through 2027; structural SE Asia LNG skip; coal switching</td>
+            <td>96</td>
+            <td class="highlight-amber">441</td>
+            <td class="highlight-red">−319 bcm</td>
+          </tr>
+          <tr>
+            <td><strong>C — Transition shock</strong></td>
+            <td>Conflict triggers policy-level energy restructuring; post-1973 analogue</td>
+            <td>85</td>
+            <td class="highlight-red">294</td>
+            <td class="highlight-red">−466 bcm</td>
+          </tr>
+          <tr>
+            <td><strong>Pre-war baseline</strong></td>
+            <td>IEA STEPS/CPS; NFE on schedule; SE Asia LNG growth on track</td>
+            <td>102</td>
+            <td>760</td>
+            <td>Reference</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">Sources: IEA WEO 2025 STEPS/CPS; Enerdata post-war scenarios; author analysis.</p>
+
+    <div class="callout">
+      <p><strong>Critical Insight: The IEA's Own Numbers Indict the Market.</strong> The IEA's Stated Policies Scenario projects total LNG trade in 2050 at approximately 354 mtpa. The 666 mtpa of nameplate liquefaction capacity arriving by 2028 already exceeds this 2050 demand projection by 88%. Even under Scenario A demand recovery, the implied utilisation rate at peak capacity is approximately 62% — a level that destroys the economics of the marginal project.</p>
+    </div>
+
+    <h2 class="subsection">Source-Level War Impact Narrative</h2>
+    <p>Natural gas and LNG carry the largest absolute war-related loss: −13 EJ by 2035 and −17 EJ by 2050. The mechanism is the permanent repricing of Hormuz chokepoint risk combined with the LNG skip dynamic in South and Southeast Asia.</p>
+
+    <p>Coal shows a split trajectory — a temporary 2–5 EJ surge in 2026–2030 as Japan, South Korea, and India substitute for lost LNG, followed by a 7–12 EJ decline against baseline from 2035 as the war accelerates coal retirement policy.</p>
+
+    <p>Wind and Solar is the largest beneficiary, running 12–24 EJ above baseline by 2040–2050. Nuclear accelerates by 3–5 EJ above baseline from 2035. Oil absorbs a moderate −3 to −8 EJ demand shock driven by stagflation, aviation disruption, and GDP drag.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- SECTION 03: CAPACITY BUILD-OUT -->
+  <div class="section" id="section-03">
+    <span class="section-number">Section 03</span>
+    <h1 class="section-title">Global LNG Capacity Build-Out</h1>
+
+    <div class="body-text">
+      <p>The global LNG industry is simultaneously experiencing its worst demand shock and its largest supply wave. Between 2025 and 2030, approximately 345 bcm/yr (~253 mtpa) of new LNG export capacity is expected to come online from projects already at FID and under construction — the largest capacity wave in LNG history.</p>
+    </div>
+
+    <h2 class="subsection">Capacity by Country (2025–2032)</h2>
+    
+    <div class="table-wrap">
+      <div class="table-caption">Table 3 — Global LNG liquefaction capacity build-out</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Country / Bloc</th>
+            <th>2025 (mtpa)</th>
+            <th>2028 (mtpa)</th>
+            <th>2032 (mtpa)</th>
+            <th>Net Change</th>
+            <th>War Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>USA</strong></td>
+            <td>102</td>
+            <td class="highlight-green">185</td>
+            <td>219</td>
+            <td>+117 mtpa</td>
+            <td>Positive — no Hormuz risk; contracting surge</td>
+          </tr>
+          <tr>
+            <td><strong>Qatar (war-impaired)</strong></td>
+            <td>77</td>
+            <td class="highlight-red">65*</td>
+            <td>124</td>
+            <td>+47 mtpa (delayed)</td>
+            <td>Critical — Ras Laffan damage; NFE/NFW delayed</td>
+          </tr>
+          <tr>
+            <td><strong>Australia</strong></td>
+            <td>82</td>
+            <td>87</td>
+            <td>81</td>
+            <td>−1 mtpa</td>
+            <td>Neutral — legacy decline offsets Pluto T2</td>
+          </tr>
+          <tr>
+            <td><strong>Russia (sanctioned)</strong></td>
+            <td>32</td>
+            <td>34</td>
+            <td>38</td>
+            <td>+6 mtpa</td>
+            <td>Negative — sanctions; shadow fleet risk</td>
+          </tr>
+          <tr>
+            <td><strong>Canada</strong></td>
+            <td>14</td>
+            <td>25</td>
+            <td>33</td>
+            <td>+19 mtpa</td>
+            <td>Positive — Pacific corridor; no Hormuz exposure</td>
+          </tr>
+          <tr>
+            <td><strong>Africa (Nig/Alg/Moz)</strong></td>
+            <td>43</td>
+            <td>55</td>
+            <td>72</td>
+            <td>+29 mtpa</td>
+            <td>Positive — security diversification premium</td>
+          </tr>
+          <tr>
+            <td><strong>Malaysia / Indonesia</strong></td>
+            <td>38</td>
+            <td>36</td>
+            <td>33</td>
+            <td>−5 mtpa</td>
+            <td>Neutral — legacy field depletion</td>
+          </tr>
+          <tr>
+            <td><strong>TOTAL</strong></td>
+            <td>~504</td>
+            <td class="highlight-amber">~666</td>
+            <td>~699</td>
+            <td>+195 mtpa</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">*Qatar 2028 reflects war-impaired output. Sources: IGU World LNG Report 2025; IEA LNG Capacity Tracker March 2026; IEEFA; Incorrys.</p>
+
+    <h2 class="subsection">The US Structural Dominance</h2>
+    <p>The United States has been the dominant driver of LNG FIDs since 2019, accounting for more than 55% of sanctioned capacity. US projects carry a structural competitive advantage in the post-war environment: no Hormuz exposure, HH-linked pricing, and strong political tailwinds. By 2030, the US will account for approximately 33–35% of global LNG production — making Henry Hub the effective global price setter for the first time in LNG history.</p>
+
+    <h2 class="subsection">Qatar Timeline Slippage: The Three-Front Resource Problem</h2>
+    <p>The March 2026 Iranian missile strikes have created three competing demands on a finite pool of engineering contractors, long-lead equipment, and capital — at the same time as revenue has been severely curtailed by the production halt. The rational sequencing is repair first, selective hardening in parallel, and expansion second. But even this triage cannot fully resolve the underlying resource conflict, and slippage across all expansion timelines is now a near-certainty.</p>
+
+    <div class="callout amber">
+      <p>The fundamental constraint is not capital — Qatar has deep fiscal reserves — but engineering bandwidth. The EPC contractor market (Chiyoda, Technip Energies, CCC) was already the binding constraint before March 2026. The strikes have not created new contractor capacity; they have created new demand competing for the same scarce resources.</p>
+    </div>
+
+    <h3 class="subsubsection">Three Simultaneous Tracks</h3>
+    
+    <ul>
+      <li><strong>Track 1 — Repair:</strong> Repairing Trains 4 and 6 requires the same EPC contractors currently committed to NFE and NFS construction. Main cryogenic heat exchangers likely require full replacement — not repair — from a global supplier base already at capacity. This track takes priority by necessity: it represents restoration of existing revenue, not future optionality.</li>
+      <li><strong>Track 2 — North Field Expansion:</strong> Construction cannot resume offshore while the Strait of Hormuz remains closed to insured commercial traffic. Final commissioning onshore requires international technical staff who have largely evacuated. The NFE first train has slipped from H2 2026 to late 2027 at the earliest; NFE full capacity pushed to 2028–2029; NFS to 2029–2030; North Field West startup now projected at 2031.</li>
+      <li><strong>Track 3 — Hardening:</strong> Comprehensive air defense coverage of Ras Laffan — 4–6 battery systems (Patriot, THAAD or equivalent) — carries an estimated upfront cost of $500–750 million plus $50–100 million annually in operating costs. The binding constraint is not money but procurement and integration timelines of 2–4 years, compounded by geopolitically complex US FMS approvals.</li>
+    </ul>
+
+    <div class="table-wrap">
+      <div class="table-caption">Table 4 — Revised Ras Laffan project timeline</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Track / Project</th>
+            <th>Pre-strike Plan</th>
+            <th>Revised Reality</th>
+            <th>Key Constraint</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LNG Train 4 & 6 repair</td>
+            <td>N/A (undamaged)</td>
+            <td class="highlight-red">2029–2031 earliest</td>
+            <td>Cryogenic equipment 18–30 month lead times; offshore access blocked</td>
+          </tr>
+          <tr>
+            <td>Pearl GTL repair</td>
+            <td>N/A (undamaged)</td>
+            <td class="highlight-amber">2028–2030</td>
+            <td>Less complex than LNG trains; earlier recovery possible</td>
+          </tr>
+          <tr>
+            <td>NFE first train</td>
+            <td>H2 2026</td>
+            <td class="highlight-amber">Late 2027 at earliest</td>
+            <td>EPC bandwidth; Strait closure; staff evacuation</td>
+          </tr>
+          <tr>
+            <td>NFE full (4 trains)</td>
+            <td>End 2027</td>
+            <td class="highlight-amber">2028–2029</td>
+            <td>Sequential dependency on repair + offshore access</td>
+          </tr>
+          <tr>
+            <td>NFS (2 trains)</td>
+            <td>Late 2027–early 2028</td>
+            <td class="highlight-amber">2029–2030</td>
+            <td>Resource conflict with repair and NFE</td>
+          </tr>
+          <tr>
+            <td>North Field West</td>
+            <td>Const. start 2027</td>
+            <td class="highlight-red">2031 startup</td>
+            <td>Slipped; arrives into deepest oversupply trough ($7.54 JKM)</td>
+          </tr>
+          <tr>
+            <td>Complex hardening</td>
+            <td>Post-event priority</td>
+            <td>2027–2029</td>
+            <td>US FMS approvals; system integration; training timelines</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">Source: Independent technical assessment, April 2026; IEA LNG Capacity Tracker March 2026; author analysis.</p>
+
+    <h3 class="subsubsection">Strategic Consequences of Slippage</h3>
+    
+    <p>The timeline slippage carries three compounding strategic consequences beyond the immediate revenue loss of up to $20 billion per year during the repair period.</p>
+
+    <p><strong>First, market share displacement is structural, not temporary.</strong> The NFE capacity scheduled to come online in 2026–2028 was already contracted to long-term buyers including Sinopec, Eni, Shell, TotalEnergies, and CNPC. Force majeure on these contracts triggers replacement sourcing — primarily from US Gulf Coast producers. Buyers who secure replacement supply under long-term contracts will not automatically return to Qatari supply when Ras Laffan recovers.</p>
+
+    <p><strong>Second, QatarEnergy's internal project management bandwidth</strong> — its most constrained non-capital resource — will be consumed by repair coordination and contractor management for at least the first 18–24 months. NFE and NFS expansion projects will suffer from reduced senior oversight regardless of capital allocation decisions.</p>
+
+    <p><strong>Third, North Field West arrives into the deepest part of the oversupply trough.</strong> The 2031 startup date implied by the slippage analysis coincides almost precisely with the projected JKM trough of $7.54/MMBtu. At Qatar's $3.90/MMBtu breakeven this remains commercially viable, but the strategic logic of the project — capturing premium LNG pricing as the largest low-cost producer — is seriously weakened when the market is absorbing a 255 mtpa surplus.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- SECTION 04: PRICE FORECAST -->
+  <div class="section" id="section-04">
+    <span class="section-number">Section 04</span>
+    <h1 class="section-title">LNG Price Forecast 2025–2050</h1>
+
+    <div class="body-text">
+      <p>The price trajectory across all three major benchmarks — JKM (Asia), TTF (Europe), and Henry Hub (US) — reflects four structurally distinct phases driven by the interaction of the war shock, the US capacity wave, demand destruction, and long-run market rebalancing.</p>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-caption">Table 5 — LNG price forecast by phase — all three benchmarks (nominal $/MMBtu)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Period</th>
+            <th>JKM ($/MMBtu)</th>
+            <th>TTF ($/MMBtu)</th>
+            <th>HH ($/MMBtu)</th>
+            <th>Key Driver</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>① War spike</strong></td>
+            <td>2026 H1</td>
+            <td class="highlight-red">$15–25</td>
+            <td class="highlight-red">$14–22</td>
+            <td>$5.5–7.0</td>
+            <td>Hormuz closure + Ras Laffan damage</td>
+          </tr>
+          <tr>
+            <td><strong>② Crisis plateau</strong></td>
+            <td>2026 H2–28</td>
+            <td class="highlight-amber">$13–16</td>
+            <td class="highlight-amber">$11–14</td>
+            <td>$4.8–5.2</td>
+            <td>Ras Laffan repairs; Europe restocking at 30% storage</td>
+          </tr>
+          <tr>
+            <td><strong>③ Oversupply trough</strong></td>
+            <td>2029–2034</td>
+            <td class="highlight-amber">$7.54–10.5</td>
+            <td>$6.25–9.5</td>
+            <td>$4.99–5.1</td>
+            <td>666 mtpa capacity vs ~412 mtpa Scenario A demand</td>
+          </tr>
+          <tr>
+            <td><strong>④ Long-run equilibrium</strong></td>
+            <td>2035–2050</td>
+            <td>$5.80–8.80</td>
+            <td>$4.80–7.70</td>
+            <td>$4.50–4.95</td>
+            <td>Legacy depletion; HH convergence; coal floor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">Sources: RBAC/G2M2; Kpler; Poten & Partners; Enerdata EnerBlue 2050; EIA AEO 2025; Deloitte Gas Outlook; author analysis.</p>
+
+    <div class="callout green">
+      <p><strong>The Coal Floor Mechanism:</strong> The JKM oversupply trough is bounded from below by seaborne coal pricing (~$4.00–4.50/MMBtu Newcastle equivalent by 2031). When LNG prices fall within $1–2/MMBtu of coal, fuel-switching demand from power generators provides a demand floor that arrests further price decline. This mechanism sets the effective JKM floor at approximately $6.00–6.50/MMBtu.</p>
+    </div>
+
+    <h2 class="subsection">Henry Hub as Global Anchor</h2>
+    <p>As the US accounts for 35% of global LNG supply by 2030, Henry Hub transitions from a purely domestic benchmark to the effective marginal cost signal for the entire global LNG market. RBAC/G2M2 modelling shows the HH–JKM spread narrowing to just $2.55/MMBtu at the 2031 trough — insufficient to cover transportation and regasification costs for many cargoes, creating a structural period of cargo cancellations among US producers.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- SECTION 05: PROJECT VIABILITY -->
+  <div class="section" id="section-05">
+    <span class="section-number">Section 05</span>
+    <h1 class="section-title">LNG Project Viability Analysis</h1>
+
+    <div class="body-text">
+      <p>Against the Scenario A JKM price curve — which troughs at $7.54/MMBtu in 2031 and recovers to approximately $8.80/MMBtu by 2035 — the viability landscape bifurcates sharply between low-cost incumbent producers and higher-cost new entrants arriving at peak surplus. The table below is sorted in descending order of margin at first gas (JKM at first gas minus all-in breakeven), placing the strongest projects at the top.</p>
+    </div>
+
+    <div class="table-wrap">
+      <div class="table-caption">Table 6 — LNG project viability scorecard sorted by margin at first gas (descending)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Cap. (mtpa)</th>
+            <th>First LNG</th>
+            <th>Breakeven ($/MMBtu)</th>
+            <th>JKM @ first gas</th>
+            <th>Margin</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CC Stage 3 (10 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>10</td>
+            <td>2026</td>
+            <td>$6.50</td>
+            <td>$20.00</td>
+            <td class="highlight-green">+$13.50</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>Plaquemines Ph1+2 (27 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>27</td>
+            <td>2026</td>
+            <td>$6.80</td>
+            <td>$20.00</td>
+            <td class="highlight-green">+$13.20</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>Arctic LNG-2 (19.8 mtpa)</td>
+            <td>Russia</td>
+            <td>War-impaired</td>
+            <td>19.8</td>
+            <td>2027</td>
+            <td>$5.50</td>
+            <td>$16.50</td>
+            <td class="highlight-green">+$11.00*</td>
+            <td class="highlight-amber">Sanctions risk</td>
+          </tr>
+          <tr>
+            <td>Golden Pass (18 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>18</td>
+            <td>2027</td>
+            <td>$7.00</td>
+            <td>$16.50</td>
+            <td class="highlight-green">+$9.50</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>Nigeria LNG T7 (8 mtpa)</td>
+            <td>Africa</td>
+            <td>Sanctioned</td>
+            <td>8</td>
+            <td>2027</td>
+            <td>$7.00</td>
+            <td>$16.50</td>
+            <td class="highlight-green">+$9.50</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>Qatar NFE (32 mtpa)</td>
+            <td>Qatar</td>
+            <td>War-impaired</td>
+            <td>32</td>
+            <td>2029</td>
+            <td>$3.90</td>
+            <td>$10.50</td>
+            <td class="highlight-green">+$6.60</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>Rio Grande T1-3 (17 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>17</td>
+            <td>2028</td>
+            <td>$7.20</td>
+            <td>$13.00</td>
+            <td class="highlight-green">+$5.80</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>Port Arthur Ph1 (13.5 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>13.5</td>
+            <td>2028</td>
+            <td>$7.40</td>
+            <td>$13.00</td>
+            <td class="highlight-green">+$5.60</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>UAE ADNOC Ruwais (9.6 mtpa)</td>
+            <td>UAE</td>
+            <td>Unsanctioned</td>
+            <td>9.6</td>
+            <td>2030</td>
+            <td>$4.80</td>
+            <td>$9.20</td>
+            <td class="highlight-green">+$4.40</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>Mozambique LNG (13 mtpa)</td>
+            <td>Africa</td>
+            <td>Sanctioned</td>
+            <td>13</td>
+            <td>2029</td>
+            <td>$6.20</td>
+            <td>$10.50</td>
+            <td class="highlight-green">+$4.30</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>Qatar NFW (17 mtpa)</td>
+            <td>Qatar</td>
+            <td>War-impaired</td>
+            <td>17</td>
+            <td>2032</td>
+            <td>$3.90</td>
+            <td>$7.80</td>
+            <td class="highlight-green">+$3.90</td>
+            <td class="highlight-green">Strongly viable</td>
+          </tr>
+          <tr>
+            <td>CC T8-9 (5 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>5</td>
+            <td>2029</td>
+            <td>$6.80</td>
+            <td>$10.50</td>
+            <td class="highlight-green">+$3.70</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>Saudi Arabia LNG (10 mtpa)</td>
+            <td>Saudi Arabia</td>
+            <td>Unsanctioned</td>
+            <td>10</td>
+            <td>2035</td>
+            <td>$5.50</td>
+            <td>$8.80</td>
+            <td class="highlight-green">+$3.30</td>
+            <td class="highlight-green">Viable</td>
+          </tr>
+          <tr>
+            <td>Woodside Louisiana (16.5)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>16.5</td>
+            <td>2029</td>
+            <td>$8.50</td>
+            <td>$10.50</td>
+            <td class="highlight-amber">+$2.00</td>
+            <td class="highlight-amber">Marginal</td>
+          </tr>
+          <tr>
+            <td>CP2 LNG Ph1 (14.4 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>14.4</td>
+            <td>2029</td>
+            <td>$8.50</td>
+            <td>$10.50</td>
+            <td class="highlight-amber">+$2.00</td>
+            <td class="highlight-amber">Marginal</td>
+          </tr>
+          <tr>
+            <td>LNG Canada Ph2 (14 mtpa)</td>
+            <td>Canada</td>
+            <td>Unsanctioned</td>
+            <td>14</td>
+            <td>2030</td>
+            <td>$8.20</td>
+            <td>$9.20</td>
+            <td class="highlight-amber">+$1.00</td>
+            <td class="highlight-amber">Marginal</td>
+          </tr>
+          <tr>
+            <td>Rovuma LNG (18 mtpa)</td>
+            <td>Africa</td>
+            <td>Unsanctioned</td>
+            <td>18</td>
+            <td>2033</td>
+            <td>$7.50</td>
+            <td>$8.20</td>
+            <td class="highlight-amber">+$0.70</td>
+            <td class="highlight-amber">Marginal</td>
+          </tr>
+          <tr>
+            <td>Papua LNG (8 mtpa)</td>
+            <td>Asia-Pacific</td>
+            <td>Unsanctioned</td>
+            <td>8</td>
+            <td>2030</td>
+            <td>$8.50</td>
+            <td>$9.20</td>
+            <td class="highlight-amber">+$0.70</td>
+            <td class="highlight-amber">Under stress</td>
+          </tr>
+          <tr>
+            <td>Commonwealth LNG (9.5 mtpa)</td>
+            <td>USA</td>
+            <td>Unsanctioned</td>
+            <td>9.5</td>
+            <td>2030</td>
+            <td>$8.80</td>
+            <td>$9.20</td>
+            <td class="highlight-amber">+$0.40</td>
+            <td class="highlight-amber">Under stress</td>
+          </tr>
+          <tr>
+            <td>Rio Grande T4-5 (11 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>11</td>
+            <td>2031</td>
+            <td>$7.80</td>
+            <td>$7.54</td>
+            <td class="highlight-red">-$0.26</td>
+            <td class="highlight-red">Under stress</td>
+          </tr>
+          <tr>
+            <td>Port Arthur Ph2 (13 mtpa)</td>
+            <td>USA</td>
+            <td>Sanctioned</td>
+            <td>13</td>
+            <td>2031</td>
+            <td>$8.00</td>
+            <td>$7.54</td>
+            <td class="highlight-red">-$0.46</td>
+            <td class="highlight-red">Under stress</td>
+          </tr>
+          <tr>
+            <td>Tanzania LNG (15 mtpa)</td>
+            <td>Africa</td>
+            <td>Unsanctioned</td>
+            <td>15</td>
+            <td>2035</td>
+            <td>$10.50</td>
+            <td>$8.80</td>
+            <td class="highlight-red">-$1.70</td>
+            <td class="highlight-red">Unviable</td>
+          </tr>
+          <tr>
+            <td>Lake Charles (16.5 mtpa)</td>
+            <td>USA</td>
+            <td>Unsanctioned</td>
+            <td>16.5</td>
+            <td>2031</td>
+            <td>$9.50</td>
+            <td>$7.54</td>
+            <td class="highlight-red">-$1.96</td>
+            <td class="highlight-red">Unviable</td>
+          </tr>
+          <tr>
+            <td>Alaska LNG (20 mtpa)</td>
+            <td>USA</td>
+            <td>Unsanctioned</td>
+            <td>20</td>
+            <td>2032</td>
+            <td>$10.80</td>
+            <td>$7.80</td>
+            <td class="highlight-red">-$3.00</td>
+            <td class="highlight-red">Unviable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: -1rem;">Margin = JKM at first gas minus all-in delivered breakeven. Breakevens include feedgas, liquefaction, shipping to Asia, and capital recovery. *Arctic LNG-2: sanctions render economics largely irrelevant. JKM values read from Scenario A price curve. Sources: Woodside FID disclosure Apr 2025; Sempra SPA terms; RBAC/G2M2; Solability 2026–2035; Rystad; Poten & Partners.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- SECTION 06: STRATEGIC IMPLICATIONS -->
+  <div class="section" id="section-06">
+    <span class="section-number">Section 06</span>
+    <h1 class="section-title">Strategic Implications</h1>
+
+    <h2 class="subsection">For Qatar / QatarEnergy</h2>
+    <p>Qatar's competitive fundamentals are intact — its $3.80–3.90/MMBtu breakeven is structurally unassailable — but the war has inflicted three compounding strategic setbacks. First, NFE arrives into a glut rather than the tight market it was timed for. Second, permanent Ras Laffan damage has ceded 12.8 mtpa of contracted volumes to spot market competitors, primarily US Gulf Coast producers. Third, the Hormuz concentration risk has become permanently priced into long-term contract negotiations.</p>
+
+    <p>The three-front resource problem means that even Qatar's considerable engineering capacity cannot resolve all tracks simultaneously — slippage is now structural, not discretionary.</p>
+
+    <h2 class="subsection">For US LNG Producers</h2>
+    <p>The war is a near-term windfall and a medium-term liability. Spot revenues during the 2026 crisis are exceptional. But projects with first gas in 2029–2031 — Woodside Louisiana, CP2, Rio Grande T4-5, Port Arthur Ph2 — arrive precisely at the trough of the oversupply cycle with insufficient contracted cover. The HH–JKM spread at the 2031 trough ($2.55/MMBtu) is insufficient to cover variable costs for unhedged cargoes, triggering cargo cancellations analogous to the 2020 COVID-period shut-ins.</p>
+
+    <h2 class="subsection">For Emerging Market Buyers</h2>
+    <p>The war has permanently altered the LNG risk calculus for price-sensitive importers. Countries like Bangladesh, Pakistan, and Thailand — priced out at $21–25/MMBtu during the crisis — are now designing energy systems that minimise LNG dependency. The "LNG as a bridge fuel" narrative has been structurally undermined. This demand destruction is largely irreversible: infrastructure built around coal or renewables does not revert to LNG when prices fall.</p>
+
+    <h2 class="subsection">For Project Developers</h2>
+    <p>The viability analysis yields three clear conclusions. Projects with first gas before 2028 capture crisis-era pricing before the glut arrives. Projects with first gas in 2029–2031 and limited contracted cover face genuine viability risk during the trough. Projects targeting first gas post-2033 should not proceed without transformative cost reduction or policy-backed offtake structures.</p>
+  </div>
+
+  <hr class="rule-heavy">
+
+  <!-- GLOSSARY -->
+  <div class="section" id="glossary">
+    <span class="section-number">Glossary</span>
+    <h1 class="section-title">Key Terms</h1>
+
+    <div class="glossary-grid">
+      <div class="gloss-term">bcm</div>
+      <div class="gloss-def">Billion cubic metres. Standard unit for natural gas volume. 1 mtpa ≈ 1.36 bcm.</div>
+
+      <div class="gloss-term">EJ</div>
+      <div class="gloss-def">Exajoule. One quintillion (10¹⁸) joules. Used to measure total primary energy supply.</div>
+
+      <div class="gloss-term">FID</div>
+      <div class="gloss-def">Final Investment Decision. The point at which a project is formally sanctioned and capital committed.</div>
+
+      <div class="gloss-term">Force Majeure</div>
+      <div class="gloss-def">Legal provision allowing contract suspension due to unforeseeable circumstances beyond parties' control.</div>
+
+      <div class="gloss-term">HH</div>
+      <div class="gloss-def">Henry Hub. Natural gas pricing point in Louisiana; US benchmark for gas futures.</div>
+
+      <div class="gloss-term">JKM</div>
+      <div class="gloss-def">Japan Korea Marker. Asia-Pacific LNG spot price benchmark published by S&P Global Platts.</div>
+
+      <div class="gloss-term">mb/d</div>
+      <div class="gloss-def">Million barrels per day. Standard unit for crude oil production and consumption.</div>
+
+      <div class="gloss-term">MMBtu</div>
+      <div class="gloss-def">Million British thermal units. Standard unit for pricing natural gas and LNG.</div>
+
+      <div class="gloss-term">mtpa</div>
+      <div class="gloss-def">Million tonnes per annum. Standard unit for LNG production capacity.</div>
+
+      <div class="gloss-term">NFE / NFS / NFW</div>
+      <div class="gloss-def">North Field East / South / West. Qatar's three-phase LNG expansion project, totalling 126 mtpa.</div>
+
+      <div class="gloss-term">Ras Laffan</div>
+      <div class="gloss-def">Industrial city in Qatar hosting the world's largest LNG export complex (77 mtpa pre-war).</div>
+
+      <div class="gloss-term">STEPS</div>
+      <div class="gloss-def">Stated Policies Scenario. IEA's baseline projection assuming existing policies continue.</div>
+
+      <div class="gloss-term">TTF</div>
+      <div class="gloss-def">Title Transfer Facility. European natural gas price benchmark (Dutch gas hub).</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     REFERENCES
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div class="references" id="references">
+  <div class="container">
+    <h2 class="subsection" style="margin-top: 0; margin-bottom: 1.5rem;">References</h2>
+    <ol class="ref-list">
+      <li>International Energy Agency. (March 2026). <em>Oil Market Report</em>. <a href="https://www.iea.org" target="_blank" rel="noopener">iea.org</a></li>
+      <li>International Energy Agency. (March 17, 2026). <em>Global LNG Capacity Tracker</em>. <a href="https://www.iea.org" target="_blank" rel="noopener">iea.org</a></li>
+      <li>International Energy Agency. (2025). <em>World Energy Outlook 2025 — STEPS & CPS Scenarios</em>. <a href="https://www.iea.org" target="_blank" rel="noopener">iea.org</a></li>
+      <li>IEEFA. (2024). <em>Global LNG Outlook 2024–2028</em>. Institute for Energy Economics and Financial Analysis.</li>
+      <li>RBAC Inc. / G2M2. (2025). <em>LNG Price Model 2025</em>. Proprietary analytical model.</li>
+      <li>Kpler. (March 19, 2026). <em>Ras Laffan Strike Analysis</em>. <a href="https://www.kpler.com" target="_blank" rel="noopener">kpler.com</a></li>
+      <li>Poten & Partners. (March 19, 2026). <em>LNG Monitor</em>. <a href="https://www.poten.com" target="_blank" rel="noopener">poten.com</a></li>
+      <li>Woodside Energy. (April 2025). <em>Louisiana LNG FID Disclosure</em>. ASX filing.</li>
+      <li>Solability. (2026). <em>Global LNG Outlook 2026–2035</em>. <a href="https://www.solability.com" target="_blank" rel="noopener">solability.com</a></li>
+      <li>McKinsey & Company. (2019). <em>LNG Cost Competitiveness Study</em>. <a href="https://www.mckinsey.com" target="_blank" rel="noopener">mckinsey.com</a></li>
+      <li>Enerdata. (2026). <em>EnerBase / EnerBlue Scenarios 2026–2050</em>. <a href="https://www.enerdata.net" target="_blank" rel="noopener">enerdata.net</a></li>
+      <li>Bloomberg. (2026). <em>Iran War: How High Could Oil Prices Get</em>. <a href="https://www.bloomberg.com" target="_blank" rel="noopener">bloomberg.com</a></li>
+      <li>Al Jazeera. (March 8, 2026). <em>Iran War Threatens Prolonged Impact on Energy Markets</em>. <a href="https://www.aljazeera.com" target="_blank" rel="noopener">aljazeera.com</a></li>
+      <li>World Economic Forum. (March 2026). <em>Global Price Tag of the Iran War</em>. <a href="https://www.weforum.org" target="_blank" rel="noopener">weforum.org</a></li>
+      <li>CNBC. (April 2, 2026). <em>Oil Demand Destruction Analysis</em>. <a href="https://www.cnbc.com" target="_blank" rel="noopener">cnbc.com</a></li>
+      <li>U.S. Energy Information Administration. (October 2025). <em>Liquefaction Capacity File</em>. <a href="https://www.eia.gov" target="_blank" rel="noopener">eia.gov</a></li>
+      <li>International Gas Union. (2025). <em>World LNG Report 2025</em>. <a href="https://www.igu.org" target="_blank" rel="noopener">igu.org</a></li>
+      <li>Rystad Energy. (July 2025). <em>FLNG Capacity Report</em>. <a href="https://www.rystadenergy.com" target="_blank" rel="noopener">rystadenergy.com</a></li>
+      <li>Foreign Policy Research Institute. (2026). <em>Experts React: Iran War Energy Markets</em>. <a href="https://www.fpri.org" target="_blank" rel="noopener">fpri.org</a></li>
+      <li>Oxford Institute for Energy Studies. (2025). <em>NG202: Global Gas Demand Outlook</em>. <a href="https://www.oxfordenergy.org" target="_blank" rel="noopener">oxfordenergy.org</a></li>
+      <li>Timera Energy / Finnotia. (March 2026). <em>Hormuz LNG Crisis Analysis</em>. <a href="https://timera-energy.com" target="_blank" rel="noopener">timera-energy.com</a></li>
+      <li>Independent Technical Note. (April 2026). <em>Ras Laffan Capacity Assessment</em>. Confidential technical briefing.</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <span class="footer-brand">The Anglophone Blind Spot</span>
+  <p>Independent investigative journalism. <a href="https://ivanapark1.substack.com">Subscribe on Substack</a>.</p>
+  <p style="margin-top: 0.75rem; font-size: 0.72rem; opacity: 0.6;">All price forecasts are presented as ranges and clearly labelled as analytical estimates. Methodology for scenario modelling and project viability analysis is fully disclosed throughout the report. © The Anglophone Blind Spot, 2026.</p>
+</footer>
+
+</body>
+</html>
